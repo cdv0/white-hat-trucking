@@ -91,6 +91,10 @@ li {
     font-size: var(--text-lg);
 }
 
+img {
+    border-radius: 4px;
+}
+
 .btn {
     display: inline-flex;
     flex-direction: column;
@@ -399,6 +403,41 @@ hr::after {
 }
 
 /** CONTACT **/
+
+.toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 2000;
+
+    background-color: #303336;
+    color: white;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 4px;
+
+    padding: 16px 24px;
+    max-width: calc(100vw - 48px);
+
+    font-family: var(--font-text);
+    font-size: var(--text-sm);
+
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 
 .container-contact {
     flex: 1;

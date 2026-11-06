@@ -49,9 +49,62 @@ servicesList.innerHTML = data.services
 
 
 
-const textarea = document.querySelector(".textarea-wrapper textarea");
-const charCount = document.querySelector(".char-count");
+const form = document.querySelector("#contact-form");
+const textarea = form.querySelector("textarea");
+const charCount = form.querySelector(".char-count");
+const toast = document.querySelector("#toast");
+const submitButton = document.querySelector('button[form="contact-form"][type="submit"]');
+const clearButton = document.querySelector('button[form="contact-form"][type="reset"]');
+
+let toastTimeout;
 
 textarea.addEventListener("input", () => {
-  charCount.textContent = `${textarea.value.length}/300`;
+    charCount.textContent = `${textarea.value.length}/300`;
 });
+
+form.addEventListener("reset", () => {
+    charCount.textContent = "0/300";
+});
+
+form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    submitButton.disabled = true;
+    clearButton.disabled = true;
+    submitButton.textContent = "SENDING...";
+
+    try {
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error("Submission failed");
+        }
+
+        form.reset();
+        showToast("Your message has been sent successfully!");
+    } catch (error) {
+        console.error(error);
+        showToast("Failed to send message. Please try again.");
+    } finally {
+        submitButton.disabled = false;
+        clearButton.disabled = false;
+        submitButton.textContent = "SUBMIT";
+    }
+});
+
+function showToast(message) {
+    clearTimeout(toastTimeout);
+
+    toast.textContent = message;
+    toast.classList.add("show");
+
+    toastTimeout = setTimeout(() => {
+        toast.classList.remove("show");
+    }, 3000);
+}

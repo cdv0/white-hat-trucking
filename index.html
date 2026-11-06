@@ -92,25 +92,27 @@
                     <h1 class="text-dark title-small" data-content="move_freight_2.label">?</h1>
                     <p class="subtext subtext-dark" data-content="move_freight_2.text"></p>
 
-                    <form class="container-inputs">
+                    <form id="contact-form" class="container-inputs" action="https://formspree.io/f/xzeewqkq" method="POST">
                         <input type="text" name="name" placeholder="NAME" required>
 
                         <input type="email" name="email" placeholder="EMAIL" required>
 
                         <div class="textarea-wrapper">
                             <textarea
-name="inquiry"
-placeholder="INQUIRY"
-maxlength="300"
+                    name="inquiry"
+                    placeholder="INQUIRY"
+                    maxlength="300"
+                    required
                             ></textarea>
                             <span class="char-count">0/300</span>
                         </div>
                     </form>
 
                     <div class="container-controls">
-                        <button class="btn btn-primary">SUBMIT</button>
-                        <button class="btn btn-ghost">CLEAR</button>
+                        <button type="submit" form="contact-form" class="btn btn-primary">SUBMIT</button>
+                        <button type="reset" form="contact-form" class="btn btn-ghost">CLEAR</button>
                     </div>
+
                 </div>
 
                 <div class="contact-right">
@@ -148,5 +150,7 @@ maxlength="300"
           </footer>
 
     </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
