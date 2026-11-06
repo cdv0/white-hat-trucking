@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,47 +8,50 @@
     <script type="module" src="./main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">    <link rel="icon" type="image/svg+xml" href="./wht.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="./wht.svg">
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <div class="page">
 
-        <!-- HEADER -->
+<!-- HEADER -->
         <header class="header alignment" >
-            <img class="header-icon" src="./wht.svg"/>
+            <a href="#home">
+                <img class="header-icon" src="./wht.svg"/>
+            </a>
 
             <div class="header-right">
                 <ul class="header-nav nav">
-                    <li class="nav-list-item"><a class="nav-link header-nav-link" href="about-us">ABOUT US</a></li>
-                    <li class="nav-list-item"><a class="nav-link header-nav-link" href="services-coverage">SERVICES & COVERAGE</a></li>
+                    <li class="nav-list-item"><a class="nav-link header-nav-link" href="#about-us">ABOUT US</a></li>
+                    <li class="nav-list-item"><a class="nav-link header-nav-link" href="#services">SERVICES</a></li>
                 </ul>
 
-                <button class="btn btn-primary">CONTACT ME →</button>
+                <a class="btn btn-primary" href="#contact">CONTACT ME →</a>
             </div>
         </header>
 
-        <!-- MAIN CONTENT-->
+<!-- MAIN CONTENT-->
 
-        <!-- HERO PAGE-->
-        <section class="hero section alignment">
+<!-- HERO PAGE-->
+        <section id="home" class="hero section alignment">
             <div class="container">
                 <h1 class="hero-title" data-content="hero.text"></h1>
                 <h1 class="hero-title text-secondary" data-content="hero.subtext"></h1>
             </div>
 
             <div class="container-controls">
-                <button class="btn btn-primary">READ MORE →</button>
-                <button class="btn btn-outline">CONTACT ME</button>
+                <a class="btn btn-primary" href="#about-us">READ MORE →</a>
+                <a class="btn btn-outline" href="#contact">CONTACT ME</a>
             </div>
         </section>
 
         <hr />
 
-        <!-- ABOUT US PAGE -->
-         <section class="about-us section alignment">
+<!-- ABOUT US PAGE -->
+         <section id="about-us" class="about-us section alignment">
             <div class="container-about-us-left">
-                <img src="./truck2.jpg" height="480px" width="580px" style="object-fit: cover; object-position: center;"">
+                <img src="./truck2.jpg" height="480px" width="580px" style="object-fit: cover; object-position: center;">
             </div>
 
             <div class="container-about-us-right">
@@ -64,8 +68,8 @@
 
          <hr/>
 
-         <!-- SERVICES PAGE -->
-          <section class="services section alignment">
+<!-- SERVICES PAGE -->
+          <section id="services" class="services section alignment">
             <h2>SERVICES</h2>
 
             <div id="services-list"></div>
@@ -76,13 +80,13 @@
                     <p class="subtext" data-content="move_freight_1.text"></p>
                 </div>
 
-                <button class="btn btn-primary">CONTACT ME</button>
+                <a class="btn btn-primary" href="#contact">CONTACT ME</a>
             </div>
           </section>
 
           <hr/>
 
-          <section class="section contact alignment">
+          <section id="contact" class="section contact alignment">
             <div class="container-contact">
                 <div class="contact-left">
                     <h1 class="text-dark title-small" data-content="move_freight_2.label">?</h1>
@@ -95,9 +99,9 @@
 
                         <div class="textarea-wrapper">
                             <textarea
-                            name="inquiry"
-                            placeholder="INQUIRY"
-                            maxlength="300"
+name="inquiry"
+placeholder="INQUIRY"
+maxlength="300"
                             ></textarea>
                             <span class="char-count">0/300</span>
                         </div>
@@ -105,7 +109,7 @@
 
                     <div class="container-controls">
                         <button class="btn btn-primary">SUBMIT</button>
-                        <button class="btn btn-ghost">CLEAR</button> 
+                        <button class="btn btn-ghost">CLEAR</button>
                     </div>
                 </div>
 
@@ -131,7 +135,6 @@
                     <ul class="footer-nav">
                         <li><a href="#about-us">About Us</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#coverage">Coverage</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
