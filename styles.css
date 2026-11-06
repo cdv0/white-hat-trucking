@@ -107,6 +107,9 @@ li {
     border-radius: 2px;
     padding: 14px 22px;
     cursor: pointer;
+
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+
 }
 
 .btn-ghost {
@@ -153,10 +156,12 @@ li {
 
 .header-nav-link {
     border: 1px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 .header-nav-link:hover {
     border: 1px solid black;
+    border-radius: 2px;
 }
 
 hr {
