@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>White Hat Trucking</title>
+    <script type="module" src="./main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:wght@400;500;600;700;800&family=Geist:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">    <link rel="icon" type="image/svg+xml" href="./wht.svg">
@@ -13,7 +14,7 @@
     <div class="page">
 
         <!-- HEADER -->
-        <header class="header" >
+        <header class="header alignment" >
             <img class="header-icon" src="./wht.svg"/>
 
             <div class="header-right">
@@ -27,6 +28,19 @@
         </header>
 
         <!-- MAIN CONTENT-->
+
+        <!-- HERO PAGE-->
+        <section class="hero section alignment">
+            <div class="container-title">
+                <h1 class="hero-title text-primary" data-content="hero.text"></h1>
+                <h1 class="hero-title text-secondary" data-content="hero.subtext"></h1>
+            </div>
+
+            <div class="container-controls">
+                <button class="btn btn-primary">READ MORE →</button>
+                <button class="btn btn-outline">CONTACT ME</button>
+            </div>
+        </section>
     </div>
 </body>
 </html>

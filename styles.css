@@ -1,8 +1,6 @@
 /** GLOBAL **/
 :root {
     font-size: 16px;
-    padding: 12px;
-    gap: 12px;
 
     --font-big: "Big Shoulders", sans-serif;
     --font-text: "Geist", sans-serif;
@@ -13,10 +11,26 @@
     --text-base: 1rem;    /* 16px */
     --text-lg: 1.125rem;  /* 18px */
     --text-xl: 1.5rem;    /* 24px */
+    --text-h1:  6rem;     /* 96px */
 
     --text-primary: #0f127a;
 
     --color-primary: #ff6b00;
+    --color-primary-hover: #d55900;
+
+    gap: 16px;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -34,7 +48,7 @@ button {
     font-size: var(--text-xs);
     letter-spacing: -1px;
     border-radius: 2px;
-    padding: 0.5rem 2rem;
+    padding: 6px 24px;
     cursor: pointer;
 }
 
@@ -43,13 +57,29 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 14px 22px;
 }
 
 .btn-primary {
     background-color: var(--color-primary);
     border: none;
     color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+.btn-outline {
+    background-color: none;
+    border: 1px solid black;
+    color: black;
+}
+
+.btn-outline:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: black;
 }
 
 .nav-list-item {
@@ -60,6 +90,41 @@ button {
     color: black;
     text-decoration: none;
 }
+
+.header-nav-link {
+    border: 1px solid transparent;
+}
+
+.header-nav-link:hover {
+    border: 1px solid black;
+}
+
+/** TEXT **/
+.hero-title {
+    font-family: var(--font-big);
+    font-size: var(--text-h1);
+    line-height: 6rem;
+}
+
+.text-secondary {
+    color: var(--color-primary);
+}
+
+
+
+/** PAGES **/
+.section {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.alignment {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+
 
 /** HEADER **/
 .header {
@@ -73,14 +138,13 @@ button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 60px;
 }
 
 .header-nav {
     display: flex;
     flex-direction: row;
     list-style-type: none;
-    gap: 0.5rem;
+    gap: 6px;
 }
 
 .header-right {
@@ -88,9 +152,41 @@ button {
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    gap: 0.5rem;
+    gap: 6px;
 }
 
 .header-nav-link {
-    padding: 1rem;
+    padding: 12px;
+}
+
+
+
+/* HERO */
+.hero {
+    background:
+        linear-gradient(
+        to bottom,
+        white 0%,
+        rgba(255, 255, 255, 0.05) 35%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.05) 65%,
+        white 100%
+        ),
+        linear-gradient(
+        rgba(255, 255, 255, 0.6),
+        rgba(255, 255, 255, 0.6)
+        ),
+        url("./truck.jpg") center / cover no-repeat;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.container-controls {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
 }

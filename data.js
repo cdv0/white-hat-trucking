@@ -5,7 +5,8 @@ export const data = {
         dot_number: "1098899"
     },
     hero: {
-        subtext: "Freight transportation & delivery."
+        text: "WHITE HAT TRUCKING.",
+        subtext: "FREIGHT TRANSPORTATION & DELIVERY."
     },
     about: {
         description: `Backed by over 35 years of highway experience, White Hat Trucking was established to give businesses and freight brokers a reliable alternative to large corporate logistics companies.
