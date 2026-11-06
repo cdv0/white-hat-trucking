@@ -43,6 +43,13 @@ h6,
     padding: 0;
 }
 
+h1 {
+    text-transform: uppercase;
+    color: black;
+    font-family: var(--font-big);
+    font-size: var(--text-h1);
+}
+
 h2 {
     text-transform: uppercase;
     color: black;
@@ -91,6 +98,17 @@ button {
     justify-content: center;
     align-items: center;
     padding: 14px 22px;
+}
+
+.btn-ghost {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: var(--font-btn);
+}
+
+.btn-ghost:hover {
+    background-color: rgba(97, 97, 97, 0.555);
 }
 
 .btn-primary {
@@ -175,6 +193,19 @@ hr::after {
     color: gray;
     font-family: var(--font-text);
     font-size: var(--text-subtext); 
+}
+
+.subtext-dark {
+    color: lightgray;
+}
+
+.text-dark {
+    color: white;
+}
+
+.title-small {
+    font-size: var(--text-h2);
+    line-height: normal;
 }
 
 
@@ -351,4 +382,72 @@ hr::after {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+
+/** CONTACT **/
+.container-contact {
+    flex: 1;
+    background-color: #303336;
+    padding: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    border-radius: 4px;
+    margin: 100px 0px;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.container-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.container-inputs input,
+.container-inputs textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #585858;
+  border: 1px solid #777;
+  border-radius: 2px;
+  padding: 12px;
+  color: white;
+  font-family: inherit;
+}
+
+.container-inputs input {
+  height: 40px;
+}
+
+.container-inputs textarea {
+  height: 108px;
+  resize: vertical;
+}
+
+.container-inputs input::placeholder,
+.container-inputs textarea::placeholder {
+  color: #e5e5e5;
+  font-family: "Big Shoulders", sans-serif;
+  font-weight: 600;
+}
+
+.textarea-wrapper {
+  position: relative;
+}
+
+.char-count {
+  position: absolute;
+  bottom: 12px;
+  right: 10px;
+  font-size: 10px;
+  color: #ddd;
 }

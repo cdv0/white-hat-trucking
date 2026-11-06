@@ -45,3 +45,13 @@ servicesList.innerHTML = data.services
     </div>
   `)
   .join("");
+
+
+
+
+const textarea = document.querySelector(".textarea-wrapper textarea");
+const charCount = document.querySelector(".char-count");
+
+textarea.addEventListener("input", () => {
+  charCount.textContent = `${textarea.value.length}/300`;
+});
