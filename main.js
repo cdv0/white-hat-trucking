@@ -28,3 +28,20 @@ featuresList.innerHTML = data.about.table
     </div>
   `)
   .join("");
+
+
+
+
+const servicesList = document.querySelector("#services-list");
+
+servicesList.innerHTML = data.services
+  .map((service, index) => `
+    <div class="service">
+      <img src="./truck.svg" width="32px" height="32px"/>
+      <div class="service-content">
+        <h3 style="text-transform: uppercase;">${service.label}</h4>
+        <p class="subtext">${service.text}</p>
+      </div>
+    </div>
+  `)
+  .join("");
