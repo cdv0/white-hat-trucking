@@ -13,6 +13,7 @@
     --text-lg: 1.125rem;  /* 18px */
     --text-h4: 1.25rem;
     --text-xl: 1.5rem;    /* 24px and H3 */
+    --text-footer: 1.85rem;
     --text-h2: 3.5rem;    /* 56px */
     --text-h1:  6rem;     /* 96px */
 
@@ -450,4 +451,94 @@ hr::after {
   right: 10px;
   font-size: 10px;
   color: #ddd;
+}
+
+
+/** FOOTER **/
+.footer {
+    padding-top: 60px;
+    padding-bottom: 48px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-notes {
+    font-family: var(--font-btn);
+    font-size: var(--text-xs);
+    color: #94A3B8;
+}
+
+.footer-title {
+    font-size: var(--text-footer);
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 52rem;
+}
+
+.footer-id {
+    font-family: var(--font-btn);
+    color: var(--color-primary);
+    font-size: var(--text-xs);
+    margin: 0;
+    padding: 0;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.footer-nav li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav a {
+  font-family: var(--font-text);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  color: #94A3B8;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--color-primary);
+}
+
+#footer-navigation-title {
+    font-size: var(--text-xs);
+    font-family: var(--font-btn);
+    font-weight: 700;
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #d1d5db;
 }

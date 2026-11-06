@@ -51,6 +51,8 @@ export const data = {
         text: "Contact us to discuss your transportation needs and service requirements."
     },
     footer: {
-        text: "White Hat Trucking is a small trucking company focused on professional freight transportation tailored to its customers' needs. Built on hard work, reliability, and a commitment to quality service."
+        text: "White Hat Trucking is a small trucking company focused on professional freight transportation tailored to its customers' needs. Built on hard work, reliability, and a commitment to quality service.",
+        rights: "© 2026 WHITE HAT TRUCKING. ALL RIGHTS RESERVED.",
+        id_text: "FMCSA MC# 581722 / DOT# 1098899"
     }
 }
